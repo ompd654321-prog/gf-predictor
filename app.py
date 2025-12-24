@@ -27,6 +27,8 @@ def home():
                 result = "jo mile wo sahi sari duniya apni hey"
             case "krishna":
                 result = "ye bade chupe rustom hey, inka kisiko pata nahi"
+            case "sahil":
+                result = "isko gym jana pasand hey ladkikyo me intrest nahi hey"
             case _:
                 result = "Ye chakke hey 🤡"
 
