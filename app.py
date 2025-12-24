@@ -21,6 +21,12 @@ def home():
                 result = "Ha sabhaya sushil mulga aahe 🫡"
             case "hod":
                 result = "Sanket yacha tondat ghete ani ha takla aahe 😈"
+            case "prajwal":
+                result = "sakshi"
+            case "swarang":
+                result = "jo mile wo sahi sari duniya apni hey"
+            case "krishna":
+                result = "ye bade chupe rustom hey, inka kisiko pata nahi"
             case _:
                 result = "Ye chakke hey 🤡"
 
