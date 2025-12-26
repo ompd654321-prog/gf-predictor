@@ -1,77 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GF Predictor 3000 😎</title>
     <style>
+        /* Modern Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial;
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            /* Animated Gradient Background */
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: white;
+            overflow: hidden;
         }
 
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism Card */
         .card {
-            background: rgba(0,0,0,0.6);
-            padding: 30px;
-            width: 350px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 40px;
+            width: 90%;
+            max-width: 420px;
             text-align: center;
-            border-radius: 15px;
-            box-shadow: 0 0 20px black;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         h1 {
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 25px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
+        /* Input Styling */
         input {
-            width: 90%;
-            padding: 10px;
-            border-radius: 5px;
-            border: none;
-            margin-bottom: 15px;
+            width: 100%;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            outline: none;
+            color: white;
             font-size: 16px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
         }
 
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        input:focus {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #ffffff;
+            box-shadow: 0 0 15px rgba(255,255,255,0.2);
+        }
+
+        /* Neon Button Styling */
         button {
-            padding: 10px 20px;
-            font-size: 16px;
-            background: #ff9800;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: #ffffff;
+            color: #e73c7e;
             border: none;
-            border-radius: 5px;
+            border-radius: 12px;
             cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
 
         button:hover {
-            background: #ffc107;
+            background: #ffecf2;
+            transform: scale(1.02);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
         }
 
+        button:active {
+            transform: scale(0.98);
+        }
+
+        /* Result Section */
         .result {
-            margin-top: 20px;
-            font-size: 18px;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
             color: #00ffcc;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+            animation: fadeIn 0.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: vertical-align: -10px; }
+            to { opacity: 1; transform: vertical-align: 0; }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.6);
         }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <h1>💘 GF Predictor 💘</h1>
+    <h1>💘 GF Predictor <span style="font-size: 0.8em; vertical-align: middle;">3000</span></h1>
 
     <form method="POST">
-        <input type="text" name="name" placeholder="Enter your name" required>
-        <br>
-        <button type="submit">Predict 😈</button>
+        <input type="text" name="name" placeholder="Enter your name..." required autocomplete="off">
+        <button type="submit">Predict My Fate 😈</button>
     </form>
 
     {% if result %}
         <div class="result">
-            {{ result }}
+            ✨ {{ result }}
         </div>
     {% endif %}
 </div>
+
+<footer>Powered by Love & Logic</footer>
 
 </body>
 </html>
