@@ -19,7 +19,7 @@ def home():
             case "atharva":
                 result = "SS 😎 & ",AK
             case "om":
-                result = "Laddu Paglu  or Playboy &",GT
+                result = "Laddu Paglu  or Playboy & Iski GF bolti he ye 10 sec se jyada nahi tikta peech pe"
             
             case "prajwal":
                 result = "sakshi"
