@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Love Calculator 💖</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SAME STYLE (copy-paste your existing <style> exactly) -->
+    <style>
+        /* 🔴 COPY YOUR FULL CSS FROM THE MAIN PAGE HERE 🔴 */
+    </style>
+</head>
+<body>
+
+<nav style="position:absolute; top:20px; left:50%; transform:translateX(-50%);">
+    <a href="/" style="margin:0 15px; color:white; text-decoration:none; font-weight:600;">
+        GF Predictor
+    </a>
+    <a href="/love-calculator" style="margin:0 15px; color:white; text-decoration:none; font-weight:600;">
+        Love Calculator
+    </a>
+</nav>
+
+<div class="card">
+    <h1>💖 Love Calculator</h1>
+
+    <form method="POST">
+        <input type="text" name="your_name" placeholder="Your Name..." required autocomplete="off">
+        <input type="text" name="crush_name" placeholder="Crush Name..." required autocomplete="off">
+        <button type="submit">Calculate ❤️</button>
+    </form>
+
+    {% if percentage %}
+        <div class="result">
+            💕 {{ your_name }} & {{ crush_name }}<br>
+            Love Compatibility: {{ percentage }}%
+        </div>
+    {% endif %}
+</div>
+
+<footer>Powered by Love & Logic</footer>
+
+</body>
+</html>
