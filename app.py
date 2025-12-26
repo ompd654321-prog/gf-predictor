@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import random as r
+
 
 app = Flask(__name__)
 
@@ -32,11 +32,7 @@ def home():
             case _:
                 result = "Chutiya he kya saale,Jake Mia Khalifa dekh Wahi tera sabkuchh he🤡"
 
-    luck=str(input("Enter Your Name : "));
-n=["Lund","BSDK","BKL","Bhadwa","Bhosri Wala"]
 
-print(r.choice(n), " ",luck);
-    
             
 
     return render_template("index.html", result=result)
