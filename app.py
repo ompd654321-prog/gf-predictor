@@ -10,15 +10,15 @@ def home():
 
         match ch:
             case "anuj":
-                result = "Aaisey logo ki gf nahi hoti, follow back bhi nahi milta 😭"
+                result = "Pehle follow Back mang"
             case "prathamesh":
-                result = "Laddu 🍩"
+                result = "Virat Kohli"
             case "sanket":
                 result = "Rashika 💖"
             case "atharva":
                 result = "SS 😎"
             case "om":
-                result = "Ha sabhaya sushil mulga aahe 🫡"
+                result = "Laddu Paglu  or Playboy"
             case "hod":
                 result = "Sanket yacha tondat ghete ani ha takla aahe 😈"
             case "prajwal":
@@ -30,7 +30,8 @@ def home():
             case "sahil":
                 result = "isko gym jana pasand hey ladkikyo me intrest nahi hey"
             case _:
-                result = "Ye chakke hey 🤡"
+                result = "Jake Mia Khalifa dekh Wahi tera sabkuchh he🤡"
+            
 
     return render_template("index.html", result=result)
 
