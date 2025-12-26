@@ -30,7 +30,7 @@ def home():
             case "sahil":
                 result = "isko gym jana pasand hey ladkikyo me intrest nahi hey"
             case _:
-                result = "Jake Mia Khalifa dekh Wahi tera sabkuchh he🤡"
+                result = "Chutiya he kya saale,Jake Mia Khalifa dekh Wahi tera sabkuchh he🤡"
 
     luck=str(input("Enter Your Name : "));
 n=["Lund","BSDK","BKL","Bhadwa","Bhosri Wala"]
