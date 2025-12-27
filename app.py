@@ -1,20 +1,21 @@
 from flask import Flask, render_template, request
-import random as r
+import random
 
 app = Flask(__name__)
 
 # =========================
-# GF PREDICTOR (EXISTING)
+# GF PREDICTOR
 # =========================
 @app.route("/", methods=["GET", "POST"])
 def home():
     result = ""
+
     if request.method == "POST":
         ch = request.form["name"].lower()
 
         match ch:
             case "anuj":
-                result = "Aaisey logo ki gf nahi hoti, follow back bhi nahi milta 😭"
+                result = "Aaisey logo ki gf nahi hoti 😭"
             case "prathamesh":
                 result = "Nothing"
             case "sanket":
@@ -23,30 +24,39 @@ def home():
                 result = "SS 😎"
             case "om":
                 result = "Playboy"
-            
             case "prajwal":
-                result = "sakshi"
+                result = "Sakshi"
             case "swarang":
-                result = "jo mile wo sahi sari duniya apni hey"
+                result = "Jo mile wo sahi"
             case "krishna":
-                result = "ye bade chupe rustom hey, inka kisiko pata nahi"
+                result = "Secret player 🤫"
             case "sahil":
-                result = "isko gym jana pasand hey ladkikyo me intrest nahi hey"
+                result = "Gym lover 💪"
             case _:
-                result = "Ye chakke hey 🤡"
+                result = "Single hi rahega 🤡"
 
     return render_template("index.html", result=result)
 
 
 # =========================
-# LOVE CALCULATOR (NEW)
+# LOVE CALCULATOR
 # =========================
 @app.route("/love-calculator", methods=["GET", "POST"])
 def love_calculator():
-   arr=["Lund","bsdk","Bhadwa","Randwa","BKL","Chhakka","Bhadkhau"];
-   n=str(input("Enter Your Name : "))
-   print(n," ",r.choice(arr));
-love_calculator()
+    message = ""
+
+    words = ["Legend 😎", "Lucky ❤️", "Dangerous 😏", "Cute 🤭", "Silent 🤫"]
+
+    if request.method == "POST":
+        name = request.form["name"]
+        message = f"{name} is {random.choice(words)}"
+
+    return render_template("love.html", message=message)
+
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
+
 
 
 if __name__ == "__main__":
