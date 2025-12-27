@@ -22,9 +22,8 @@ def home():
             case "atharva":
                 result = "SS 😎"
             case "om":
-                result = "Ha sabhaya sushil mulga aahe 🫡"
-            case "hod":
-                result = "Sanket yacha tondat ghete ani ha takla aahe 😈"
+                result = "Playboy"
+            
             case "prajwal":
                 result = "sakshi"
             case "swarang":
