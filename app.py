@@ -41,17 +41,17 @@ def home():
 # =========================
 # LOVE CALCULATOR
 # =========================
-@app.route("/love-calculator", methods=["GET", "POST"])
-def love_calculator():
-    message = ""
+# @app.route("/love-calculator", methods=["GET", "POST"])
+# def love_calculator():
+#     message = ""
 
-    words = ["Legend 😎", "Lucky ❤️", "Dangerous 😏", "Cute 🤭", "Silent 🤫"]
+#     words = ["Legend 😎", "Lucky ❤️", "Dangerous 😏", "Cute 🤭", "Silent 🤫"]
 
-    if request.method == "POST":
-        name = request.form["name"]
-        message = f"{name} is {random.choice(words)}"
+#     if request.method == "POST":
+#         name = request.form["name"]
+#         message = f"{name} is {random.choice(words)}"
 
-    return render_template("love.html", message=message)
+#     return render_template("love.html", message=message)
 
 
 if __name__ == "__main__":
