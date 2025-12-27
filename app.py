@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import random
+import random as r
 
 app = Flask(__name__)
 
@@ -16,7 +16,7 @@ def home():
             case "anuj":
                 result = "Aaisey logo ki gf nahi hoti, follow back bhi nahi milta 😭"
             case "prathamesh":
-                result = "Laddu 🍩"
+                result = "Nothing"
             case "sanket":
                 result = "Rashika 💖"
             case "atharva":
@@ -44,26 +44,10 @@ def home():
 # =========================
 @app.route("/love-calculator", methods=["GET", "POST"])
 def love_calculator():
-    percentage = None
-    your_name = ""
-    crush_name = ""
-
-    if request.method == "POST":
-        your_name = request.form.get("your_name")
-        crush_name = request.form.get("crush_name")
-
-        # Always 80%+
-        percentage = random.randint(80, 100)
-
-        # Visible ONLY to you (Render logs)
-        print(f"[LOVE CALCULATOR] {your_name} ❤️ {crush_name} = {percentage}%")
-
-    return render_template(
-        "love_calculator.html",
-        percentage=percentage,
-        your_name=your_name,
-        crush_name=crush_name
-    )
+   arr=["Lund","bsdk","Bhadwa","Randwa","BKL","Chhakka","Bhadkhau"];
+   n=str(input("Enter Your Name : "))
+   print(n," ",r.choice(arr));
+love_calculator()
 
 
 if __name__ == "__main__":
