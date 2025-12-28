@@ -1,44 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Love Calculator 💖</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- SAME STYLE (copy-paste your existing <style> exactly) -->
+    <title>Love Calculator ❤️</title>
     <style>
-        /* 🔴 COPY YOUR FULL CSS FROM THE MAIN PAGE HERE 🔴 */
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        .card {
+            background: rgba(0,0,0,0.6);
+            padding: 30px;
+            width: 350px;
+            text-align: center;
+            border-radius: 15px;
+        }
+        input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background: #ff9800;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
 
-<nav style="position:absolute; top:20px; left:50%; transform:translateX(-50%);">
-    <a href="/" style="margin:0 15px; color:white; text-decoration:none; font-weight:600;">
-        GF Predictor
-    </a>
-    <a href="/love-calculator" style="margin:0 15px; color:white; text-decoration:none; font-weight:600;">
-        Love Calculator
-    </a>
-</nav>
-
 <div class="card">
-    <h1>💖 Love Calculator</h1>
+    <h1>💖 Love Calculator 💖</h1>
 
     <form method="POST">
-        <input type="text" name="your_name" placeholder="Your Name..." required autocomplete="off">
-        
-        <button type="submit">Calculate ❤️</button>
+        <input type="text" name="your_name" placeholder="Your Name" required>
+        <input type="text" name="crush_name" placeholder="Crush Name" required>
+        <button type="submit">Calculate 💘</button>
     </form>
 
     {% if percentage %}
-        <div class="result">
-            💕 {{ your_name }} & {{ crush_name }}<br>
-            Love Compatibility: {{ percentage }}%
-        </div>
+        <h2>{{ your_name }} ❤️ {{ crush_name }}</h2>
+        <h3>Love = {{ percentage }}%</h3>
     {% endif %}
 </div>
-
-<footer>Powered by Love & Logic</footer>
 
 </body>
 </html>
